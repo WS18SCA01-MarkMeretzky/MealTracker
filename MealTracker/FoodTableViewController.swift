@@ -10,25 +10,23 @@ import UIKit;
 
 class FoodTableViewController: UITableViewController {
 
-    var meals: [Meal] {
-        get {
-            return [
-                Meal(name: "breakfast", food: [
-                    Food(name: "Milk", description: "from cow"),
-                    Food(name: "Cereal", description: "crunchy granola"),
-                    Food(name: "Yogurt", description: "very sour")
-                ]),
+    var meals: [Meal] {   //computed property, pp. 146-148
+        return [          //Return an array of three Meal instances.
+            Meal(name: "breakfast", food: [
+                Food(name: "Milk", description: "from cow"),
+                Food(name: "Cereal", description: "crunchy granola"),
+                Food(name: "Yogurt", description: "very sour")
+            ]),
 
-                Meal(name: "lunch", food: [
-                    Food(name: "Tuna", description: "sandwich"),
-                    Food(name: "Orange Juice", description: "orange")
-                ]),
+            Meal(name: "lunch", food: [
+                Food(name: "Tuna", description: "sandwich"),
+                Food(name: "Orange Juice", description: "orange")
+            ]),
 
-                Meal(name: "supper", food: [
-                    Food(name: "Steak", description: "meat")
-                ])
-            ];
-        }
+            Meal(name: "supper", food: [
+                Food(name: "Steak", description: "meat")
+            ])
+        ];
     }
 
     override func viewDidLoad() {
